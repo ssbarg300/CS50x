@@ -1,0 +1,5 @@
+If songs.db contains the top 100 songs of one listener from 2018, how would you characterize their audio aura?
+I would have calculated using loudness and tempo of the song, as slow tracks usally have low loudness and tempo compared to rap tracks.
+
+Hypothesize about why the way you’ve calculated this aura might not be very representative of the listener. What better ways of calculating this aura would you propose?
+This might not be the best way to calculate because songs can have varying attritubes, maybe look at what an artist is mostly popular for ?

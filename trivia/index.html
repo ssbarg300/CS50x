@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+
+<!--In Collaboration With @slyvy on discord!-->
+
+<html lang="en">
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+        <link href="styles.css" rel="stylesheet">
+        <title>Trivia!</title>
+        <script>
+            // TODO: Add code to check answers to questions
+            function changecolor(event) {
+                trigger = event.target.name;
+                if (trigger == "Nothing") {
+                    event.tarrget.style.backgroundColor = "#d9edff";
+                    event.target.style.backgroundColor = "green";
+                    document.getElementById("h").textContent = "Correct";
+                }
+                else {
+                    event.tarrget.style.backgroundColor = "#d9edff";
+                    event.target.style.backgroundColor = "red";
+                    document.getElementById("h").textContent = "Incorrect";
+
+                }
+
+            }
+            // loading full dom and checkin for click in form tag
+            document.addEventListener("DOMContentLoaded", function( ) {
+            document.querySelector('form').addEventListener('submit', function(event) {
+                // making sure its client side operation only
+                event.preventDefault();
+                // setting up variables to get operations done
+                let ans = document.querySelector('#AAA').value.toLowerCase();
+                let field = document.querySelector('#AAA');
+
+
+                if (ans == 'blueberry')
+                {
+                    field.style.backgroundColor = 'green';
+                    //updating "comment" text
+                    document.getElementById("comment").textContent = "Correct!";
+                }
+                else
+                {
+                    field.style.backgroundColor = 'red';
+                    document.getElementById("comment").textContent = "Incorrect";
+                }
+            });
+        });
+
+        </script>
+    </head>
+    <body>
+        <div class="header">
+            <h1>Trivia!</h1>
+        </div>
+
+        <div class="container">
+            <div class="section">
+                <h2>Part 1: Multiple Choice </h2>
+                <hr>
+                <!-- TODO: Add multiple choice question here -->
+                <!--here i give a question followed by buttons which are options and i call the changecolor Function which i made above in javascript-->
+                <h3>What goes up a hill with 3 legs and comes down with 2?</h3>
+                <button type="submit" onclick="changecolor(event)" name="Bird">Bird</button>
+                <button type="submit" onclick="changecolor(event)" name="Sheep">Sheep</button>
+                <button type="submit" onclick="changecolor(event)" name="Nothing">Nothing</button>
+                <button type="submit" onclick="changecolor(event)" name="Human">Human</button>
+                <button type="submit" onclick="changecolor(event)" name="Ant">Ant</button>
+                <button type="submit" onclick="changecolor(event)"name="Ostrich">Ostrich</button>
+                <!--this is the empty space we will write the answer to! i named the id h just cuz btw it doesnt mean anything lol-->
+                <h4 id="h"></h4>
+            </div>
+
+            <div class="section">
+                <h2>Part 2: Free Response</h2>
+                <hr>
+                <h3>
+                    <!-- TODO: Add free response question here -->
+                        Which fruit has the richest source of antioxidants?
+                    </h3>
+                    <!-- setting up space of comment in advance -->
+                    <h4 id ="comment"></h4>
+                    <form id ="second">
+                        <!-- setting up placeholder for ans and submit button -->
+                        <input name="answer" type="text" id="AAA" autocomplete="off">
+                        <button type = "submit">Submit</button id = "AA">
+                <!-- TODO: Add free response question here -->
+            </div>
+        </div>
+    </body>
+</html>

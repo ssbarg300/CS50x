@@ -1,0 +1,2 @@
+SELECT name FROM people JOIN directors, movies ON directors.person_id = people.id AND directors.movie_id = movies.id
+JOIN ratings ON ratings.movie_id = movies.id WHERE ratings.rating = 9.00 OR ratings.rating > 9.00;

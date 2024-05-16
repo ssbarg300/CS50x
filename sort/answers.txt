@@ -1,0 +1,11 @@
+sort1 uses: bubble sort
+
+How do you know?: its the slowest out of all in sorting random numbers but its the fastest in reading sorted numbers
+
+sort2 uses: merge sort
+
+How do you know?: it iterates (n log n ) times wich means it is fastest in sorting but not as fast as bubble sort in reading sorted values but
+
+sort3 uses: selection sort
+
+How do you know?: its O is O(n^2) and its omega is the same so even in its sorted value it will perform the actions (n^2) times
